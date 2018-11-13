@@ -8,7 +8,7 @@
 	  $reminder = $_POST["reminder"];
 	}	
 
-	$sql = "INSERT INTO `tbl1`(`Taskname`, `Taskdate`, `Reminder`) VALUES ('$taskname', '$taskdate', '$reminder')";
+	$sql = "INSERT INTO `tbl1`(`title`, `date`, `Reminder`) VALUES ('$taskname', '$taskdate', '$reminder')";
 
 if (mysqli_query($conn, $sql)) {
     header('Location: display.php');
