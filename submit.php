@@ -5,7 +5,8 @@
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	  $taskname = $_POST["taskname"];
 	  $taskdate = $_POST["taskdate"];
-	  $reminder = $_POST["reminder"];
+	  if (!isset($_POST["reminder"]))
+	    $reminder = "no";
 	}	
 
 	$sql = "INSERT INTO `tbl1`(`title`, `date`, `Reminder`) VALUES ('$taskname', '$taskdate', '$reminder')";
